@@ -20,13 +20,13 @@
                 <h2 class="text-xl font-bold text-gray-700">Login</h2>
                 <div>
                     <input type="email" id="email" 
-                    class="w-full bg-gray-200 px-3 py-2 border-rounded-md 
+                    class="w-full bg-gray-200  rounded-xl px-3 py-2 border-rounded-md 
                     focus:outline-none focus:ring-2 focus:ring-blue-500" 
                     placeholder="Enter email address.." />
                 </div>
                 <div class="relative">
                     <input type="password" id="password" 
-                    class="w-full bg-gray-200 px-3 py-2 border-rounded-md 
+                    class="w-full bg-gray-200 rounded-xl px-3 py-2 border-rounded-md 
                     focus:outline-none focus:ring-2 focus:ring-blue-500" 
                     placeholder="Enter password.." />
 
@@ -47,7 +47,7 @@
                 <h2 class="text-xl font-bold text-gray-700">Register</h2>
                 <div>
                     <input type="text" id="regName" class="w-full bg-gray-200 
-                    px-3 py-2 border-rounded-md 
+                    rounded-xl px-3 py-2 border-rounded-md 
                     focus:outline-none focus:ring-2 
                     focus:ring-blue-500"
                     placeholder="Enter name.."
@@ -55,13 +55,13 @@
                 </div>
                 <div>
                     <input type="email" id="email" 
-                    class="w-full bg-gray-200 px-3 py-2 border-rounded-md 
+                    class="w-full bg-gray-200 rounded-xl px-3 py-2 border-rounded-md 
                     focus:outline-none focus:ring-2 focus:ring-blue-500" 
                     placeholder="Enter email address.." />
                 </div>
                 <div class="relative">
                     <input type="password" id="password" 
-                    class="w-full bg-gray-200 px-3 py-2 border-rounded-md 
+                    class="w-full bg-gray-200 rounded-xl px-3 py-2 border-rounded-md 
                     focus:outline-none focus:ring-2 focus:ring-blue-500" 
                     placeholder="Enter password.." />
 
@@ -77,5 +77,25 @@
                 </button>        
             </form>
         </div>
+
+        <script>
+            //Toggle form visibility
+            const loginForm = document.getElementById('loginForm');
+            const registerForm = document.getElementById('registerForm');
+            const loginToggle = document.getElementById('loginToggle');
+            const registerToggle = document.getElementById('registerToggle');
+
+            loginToggle.addEventListener("click", ()=>{
+                loginForm.classList.remove("hidden");
+                registerForm.classList.add("hidden");
+                loginToggle.classList.add("bg-blue-500", "text-white");
+                loginToggle.classList.remove("bg-gray-300", "text-gray-700");
+                registerToggle.classList.add("bg-gray-300", "text-gray-700");
+                registerToggle.classList.remove("bg-green-500", "text-white");
+            });
+
+
+
+        </script>
     </body>
 </html>
